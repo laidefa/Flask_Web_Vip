@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}果汁大云播--优酷、爱奇艺、腾讯VIP视频免费观看{% endblock %}
+{% block page_content %}
+<div class="page-header" p style="text-align: center;">
+    <h2 >本站支持腾讯、优酷、爱奇艺vip视频解析,保证可用性！请持续关注....</h2>
+</div>
+
+<!--<div class="panel panel-default" p style="text-align: center;">-->
+          <!--<div id="kj" class="panel-body">-->
+			<!--<iframe width="60%" height="600px" id="player" allowtransparency="true" frameborder="0" scrolling="no" src="http://api.baiyug.cn/vip/index.php?url={% if name %}{{ name }}{% else %}Stranger{% endif %}!"></iframe>-->
+          <!--</div>-->
+<!--</div>-->
+
+
+
+
+ <div class="col-md-14 column" p style="text-align: center;">
+        <div class="panel panel-default">
+          <div id="kj" class="panel-body">
+			<iframe width="60%" height="600px" id="player" allowTransparency="true" frameborder="0" scrolling="no" src="http://api.baiyug.cn/vip/index.php?url={% if name %}{{ name }}{% else%}http://v.youku.com/v_show/id_XMTY1Njc5MTgwOA==.html{% endif %}!">></iframe>
+          </div>
+        </div>
+ </div>
+
+
+
+
+
+
+
+
+{{ wtf.quick_form(form) }}
+{% endblock %}

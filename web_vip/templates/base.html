@@ -1,0 +1,83 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}果汁大云播--优酷、爱奇艺、腾讯VIP视频免费观看{% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="shortcut icon" href="{{ url_for('static', filename = 'favicon.ico') }}"
+type="image/x-icon">
+<link rel="icon" href="{{ url_for('static', filename = 'favicon.ico') }}"
+type="image/x-icon">
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{{ moment.include_moment() }}
+{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle"
+        data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">果汁大云播 </a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/">优酷、爱奇艺、腾讯VIP视频免费观看</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<br class="container">
+  {% for message in get_flashed_messages() %}
+  <div class="alert alert-warning" >
+    <button type="button" class="close" data-dismiss="alert" p style="text-align: center;">&times;</button>
+    {{ message }}
+  </div>
+
+  {% endfor %}
+
+
+  {% block page_content %}
+
+
+{% endblock %}
+
+<br><br>
+
+<br><br>
+<div style="text-align:center">友情链接</div>
+<br><br>
+<table border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+
+    <td valign="top"><a target="_blank" href="http://www.youku.com/" rel="nofollow"><img src="{{ url_for('static', filename = 'youkulogo.png') }}" width="110" height="35" /></a><dd style="text-align:center">优酷视频</dd></td>
+    <td valign="top"><div style="margin-left:50px;"><a target="_blank" href="http://v.qq.com/" rel="nofollow"><img src="{{ url_for('static', filename = 'qqlogo.png') }}" width="110" height="35" /></a><dd style="text-align:center">腾讯视频</dd></div></td>
+    <td valign="top"><div style="margin-left:50px;"><a target="_blank" href="http://www.iqiyi.com/" rel="nofollow"><img src="{{ url_for('static', filename = 'iqiyi.png') }}" width="110" height="35" /></a><dd style="text-align:center">爱奇艺视频</dd></div></td>
+  </tr>
+</table>
+<br><br>
+
+
+<div class="copyright">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-sm-12">
+            <br><span>Copyright © 2017 <a href="/" rel="nofollow">优酷、爱奇艺、腾讯VIP视频免费观看</a>  All Rights Reserved. 丨 <a target="_blank" href="/">果汁大云播</a></span><br><br>
+		  </div>
+		  </div>
+      </div>
+    </div>
+{% endblock %}
