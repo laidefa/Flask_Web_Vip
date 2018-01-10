@@ -24,10 +24,10 @@ Python Flask框架开发网站-果汁大云播
 # 如何运行
 运行start_web_vip.sh 脚本
 
-'''
+``` 
 #!/bin/bash
 python /root/web_vip/hello.py
-'''
+```
 
 后台启动运行服务
 
