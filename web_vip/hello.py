@@ -57,4 +57,15 @@ def internal_server_error(e):
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0",debug=True)
+    #测试调试模式
+    #app.run(host="0.0.0.0",debug=True)
+    
+    
+    #线上正式模式
+    b = True
+    while (b):
+        try:
+            app.run(host='0.0.0.0',port='1518')
+            b = False
+        except:
+            k = 0
