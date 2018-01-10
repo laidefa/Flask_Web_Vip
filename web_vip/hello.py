@@ -57,11 +57,11 @@ def internal_server_error(e):
 
 
 if __name__ == '__main__':
-    #测试调试模式
+    #测试调试模式(windows)
     #app.run(host="0.0.0.0",debug=True)
     
     
-    #线上正式模式
+    #线上正式模式(linux)
     b = True
     while (b):
         try:
