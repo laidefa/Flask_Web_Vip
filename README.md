@@ -54,6 +54,7 @@ Supervisord是一个守护进程的工具，当进程意外终止或服务器掉
 1、supervisor 安装
 
 - ubantu:sudo apt-get install supervisor 
+
 - centos: yum install supervisor
 
 
@@ -83,15 +84,21 @@ startsecs=1
 注释：
 
 - 第一行的myProgram自己取个名字，表示你的项目就行 
+
 - 第二行的python /home/myname/test.py表示你运行程序的命令 
+
 - 第三行表示自动启动，如果值为false则表示不自动启动 
+
 - 第四行表示自动重启，如果值为false则表示不自动重启 
+
 - 最后一样表示程序打印出的信息都记录在该test.log文件内，是log文件
 
 
 
 3、supervisor 常用命令
 
+
+``` 
 sudo service supervisor stop #停止supervisor服务
 
 sudo service supervisor start #启动supervisor服务
@@ -101,8 +108,7 @@ supervisorctl shutdown #关闭所有任务
 supervisorctl stop|start program_name #启动或停止服务
 
 supervisorctl status #查看所有任务状态
-
-
+```
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 # 联系我
