@@ -31,15 +31,15 @@ python /root/web_vip/hello.py
 
 后台启动运行服务
 
-方法1：
+### 方法1：
 
 ``` 
 nohup ./start_web_vip.sh >>myjob.txt &
 ```
 
-方法2：使用supervisor保持python进程运行
+### 方法2：使用supervisor保持python进程运行
 
-启动 supervisor
+linux 下 执行以下命令运行
 ``` 
 sudo supervisord 
 ```
