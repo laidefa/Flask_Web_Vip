@@ -51,14 +51,14 @@ Supervisord是一个守护进程的工具，当进程意外终止或服务器掉
 
 自带监控界面，可以通过浏览器灵活的查看、操作。
 
-1、supervisor 安装
+### 1、supervisor 安装
 
 - ubantu:sudo apt-get install supervisor 
 
 - centos: yum install supervisor
 
 
-2.配置supervisord.conf文件
+### 2.配置supervisord.conf文件
 
 找到supervisord.conf配置文件，一般centos 在/etc/ 目录下，ubantu 在/etc/supervisor/ 目录下，用root权限打开该文件：
 
@@ -95,7 +95,7 @@ startsecs=1
 
 
 
-3、supervisor 常用命令
+### 3、supervisor 常用命令
 
 
 ``` 
