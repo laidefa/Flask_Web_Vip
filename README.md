@@ -57,6 +57,8 @@ Supervisord是一个守护进程的工具，当进程意外终止或服务器掉
 
 - centos: yum install supervisor
 
+- pip:pip install supervisor
+
 
 ### 2.配置supervisord.conf文件
 
