@@ -125,6 +125,12 @@ supervisorctl stop|start program_name #启动或停止服务
 supervisorctl status #查看所有任务状态
 ```
 
+### supervisor 官方网站
+
+- https://github.com/Supervisor/supervisor
+- http://supervisord.org/
+
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 # 联系我
 
