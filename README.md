@@ -53,14 +53,14 @@ Supervisord是一个守护进程的工具，当进程意外终止或服务器掉
 
 ### 1、supervisor 安装
 
-- ubantu:sudo apt-get install supervisor 
+- ubuntu:sudo apt-get install supervisor 
 
 - centos: yum install supervisor
 
 
 ### 2.配置supervisord.conf文件
 
-找到supervisord.conf配置文件，一般centos 在/etc/ 目录下，ubantu 在/etc/supervisor/ 目录下，用root权限打开该文件：
+找到supervisord.conf配置文件，一般centos 在/etc/ 目录下，ubuntu 在/etc/supervisor/ 目录下，用root权限打开该文件：
 
 - sudo vim /etc/supervisord.conf
 
@@ -73,11 +73,12 @@ Supervisord是一个守护进程的工具，当进程意外终止或服务器掉
 ``` 
 [program:web_vip]
 command=python /root/web_vip/hello.py
-user=root
 autostart=true
 autorestart=true
-stdout_logfile=/root/code/myjob.txt
+stdout_logfile=/root/code/myjob.log
 startsecs=1 
+startretries=3
+
 ```
 
 
@@ -85,14 +86,17 @@ startsecs=1
 
 - 第一行的myProgram自己取个名字，表示你的项目就行 
 
-- 第二行的python /home/myname/test.py表示你运行程序的命令 
+- 第二行的python /root/web_vip/hello.py表示你运行程序的命令 
 
 - 第三行表示自动启动，如果值为false则表示不自动启动 
 
 - 第四行表示自动重启，如果值为false则表示不自动重启 
 
-- 最后一样表示程序打印出的信息都记录在该test.log文件内，是log文件
+- 第五行表示程序打印出的信息都记录在该myjob.log文件内，是log文件
 
+- 第六行表示这个选项是子进程启动多少秒之后，此时状态如果是running，则我们认为启动成功了
+
+- 第七行表示当进程启动失败后，最大尝试启动的次数，当超过3次后，supervisor将把此进程的状态置为FAIL
 
 
 ### 3、supervisor 常用命令
