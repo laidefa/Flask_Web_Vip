@@ -60,7 +60,13 @@ Supervisord是一个守护进程的工具，当进程意外终止或服务器掉
 
 ### 2.配置supervisord.conf文件
 
-找到supervisord.conf配置文件，一般centos 在/etc/ 目录下，ubuntu 在/etc/supervisor/ 目录下，用root权限打开该文件：
+
+首先创建配置文件：
+
+- echo_supervisord_conf > /etc/supervisord.conf
+
+
+然后找到supervisord.conf配置文件，一般centos 在/etc/ 目录下，ubuntu 在/etc/supervisor/ 目录下，用root权限打开该文件：
 
 - sudo vim /etc/supervisord.conf
 
