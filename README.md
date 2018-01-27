@@ -83,6 +83,7 @@ Supervisord是一个守护进程的工具，当进程意外终止或服务器掉
 command=python /root/web_vip/hello.py
 autostart=true
 autorestart=true
+redirect_stderr=true
 stdout_logfile=/root/code/myjob.log
 startsecs=1 
 startretries=3
@@ -100,11 +101,13 @@ startretries=3
 
 - 第四行表示自动重启，如果值为false则表示不自动重启 
 
-- 第五行表示程序打印出的信息都记录在该myjob.log文件内，是log文件
+- 第五行表示如果为true，则stderr的日志会被写入stdout日志文件中默认为false，非必须设置
 
-- 第六行表示这个选项是子进程启动多少秒之后，此时状态如果是running，则我们认为启动成功了
+- 第六行表示程序打印出的信息都记录在该myjob.log文件内，是log文件
 
-- 第七行表示当进程启动失败后，最大尝试启动的次数，当超过3次后，supervisor将把此进程的状态置为FAIL
+- 第七行表示这个选项是子进程启动多少秒之后，此时状态如果是running，则我们认为启动成功了
+
+- 第八行表示当进程启动失败后，最大尝试启动的次数，当超过3次后，supervisor将把此进程的状态置为FAIL
 
 
 ### 3、supervisor 常用命令
